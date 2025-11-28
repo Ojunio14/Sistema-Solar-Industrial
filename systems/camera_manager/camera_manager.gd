@@ -1,5 +1,8 @@
 extends Node
 
+
+signal PosCameraOrbital(pos)
+
 # Dicionário para guardar as câmeras registradas: {"FreeFly": CameraNode, "Orbital": CameraNode}
 var cameras : Dictionary = {}
 var current_camera : Camera3D = null
@@ -24,12 +27,14 @@ func switch_to(camera_name: String):
 	
 	# Desativa a anterior (opcional, dependendo da sua lógica)
 	# if current_camera: current_camera.current = false
-	
 	# Ativa a nova
 	next_cam.make_current() # Função nativa da Godot que assume o controle
 	current_camera = next_cam
 	
-	print("Camera Manager: Trocado para " + camera_name)
+	#print("Camera Manager: Trocado para " + camera_name)
+
+
+
 
 # Exemplo: Alternar entre câmeras com uma tecla
 func _unhandled_input(event):

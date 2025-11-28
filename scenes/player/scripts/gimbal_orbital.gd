@@ -78,15 +78,15 @@ func _process(delta: float) -> void:
 	#print(orbit_radius)
 	
 	
-	if orbit_radius <= 550:
-		var cast = RayCast()
-		#print(cast["collider"].get_parent())
-		if cast.has("collider"):
-			print(cast["collider"].get_parent())
-			emit_signal("ChangedCamera")
-			orbit_radius = 700
+	#if orbit_radius <= 550:
+		#var cast = RayCast()
+		##print(cast["collider"].get_parent())
+		#if cast.has("collider"):
+			#print(cast["collider"].get_parent())
+			#emit_signal("ChangedCamera")
+			#orbit_radius = 700
 		#print(cast)
-		print(orbit_radius)
+		#print(orbit_radius)
 	
 	# Unity: transform.position = target.position - transform.forward * orbitRadius;
 	# O vetor "para frente" da Unity (-Z) é o oposto do de Godot (+Z).
@@ -139,8 +139,11 @@ func RayCast() -> Dictionary:
 	#query.collide_with_areas = true
 
 	var result = space_state.intersect_ray(query)
+	#print(result)
 	return result
 
+
 func _exit_tree():
+	
 	# Avisa o gerente que eu fui destruída (mudei de cena)
 	CameraManager.unregister_camera(my_id)

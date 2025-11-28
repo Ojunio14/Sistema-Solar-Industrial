@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://bjwxr3p6wkpr4"]
+
+[ext_resource type="Script" uid="uid://b4tq2uo5vxxgk" path="res://systems/planet_generator/scripts/planet.gd" id="1_5hgi1"]
+[ext_resource type="Script" uid="uid://d0kf88byirko5" path="res://systems/planet_generator/scripts/planet_mesh_face.gd" id="2_n8883"]
+[ext_resource type="Script" uid="uid://coijm4hcy56ui" path="res://systems/planet_generator/scripts/planet_noise.gd" id="2_opnpt"]
+[ext_resource type="Script" uid="uid://dcyw4k80j2tmk" path="res://systems/planet_generator/scripts/planet_data.gd" id="3_e76lq"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_b047j"]
+frequency = 1.0
+
+[sub_resource type="Resource" id="Resource_eiaex"]
+script = ExtResource("2_opnpt")
+noise_map = SubResource("FastNoiseLite_b047j")
+metadata/_custom_type_script = "uid://coijm4hcy56ui"
+
+[sub_resource type="Resource" id="Resource_pps6s"]
+script = ExtResource("3_e76lq")
+radius = 80.0
+resolution = 100
+planet_noise = Array[Resource]([SubResource("Resource_eiaex")])
+metadata/_custom_type_script = "uid://dcyw4k80j2tmk"
+
+[node name="Planet" type="Node3D"]
+script = ExtResource("1_5hgi1")
+planeta_data = SubResource("Resource_pps6s")
+
+[node name="Up" type="MeshInstance3D" parent="."]
+script = ExtResource("2_n8883")
+normal = Vector3(0, 1, 0)
+
+[node name="Down" type="MeshInstance3D" parent="."]
+script = ExtResource("2_n8883")
+normal = Vector3(0, -1, 0)
+
+[node name="Left" type="MeshInstance3D" parent="."]
+script = ExtResource("2_n8883")
+normal = Vector3(-1, 0, 0)
+
+[node name="Right" type="MeshInstance3D" parent="."]
+script = ExtResource("2_n8883")
+normal = Vector3(1, 0, 0)
+
+[node name="Front" type="MeshInstance3D" parent="."]
+script = ExtResource("2_n8883")
+normal = Vector3(0, 0, 1)
+
+[node name="Back" type="MeshInstance3D" parent="."]
+script = ExtResource("2_n8883")
+normal = Vector3(0, 0, -1)
