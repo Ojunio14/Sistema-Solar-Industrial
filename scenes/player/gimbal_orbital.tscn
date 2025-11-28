@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://6grpaa5bmoks"]
+
+[ext_resource type="Script" uid="uid://daor5bjrpqoj7" path="res://scenes/player/scripts/gimbal_orbital.gd" id="1_2b08j"]
+
+[node name="Gimbal_Orbital" type="Node3D"]
+script = ExtResource("1_2b08j")
+
+[node name="Camera" type="Camera3D" parent="."]
