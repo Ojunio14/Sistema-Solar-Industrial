@@ -31,6 +31,7 @@ environment = SubResource("Environment_ionc4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+visible = false
 shadow_enabled = true
 
 [node name="World" type="Node3D" parent="."]
@@ -40,13 +41,13 @@ shadow_enabled = true
 [node name="Gimbal_Orbital" parent="World/Group_Camera" node_paths=PackedStringArray("target") instance=ExtResource("2_ihqgu")]
 target = NodePath("../../MeshInstance3D")
 sensitivity = 0.5
-orbit_radius = 1400.0
-minimum_orbit_distance = 1400.0
-maximum_orbit_distance = 2000.0
+orbit_radius = 800.0
+minimum_orbit_distance = 800.0
+maximum_orbit_distance = 1400.0
 my_id = "Orbital"
 
 [node name="Camera_Livre" parent="World/Group_Camera" instance=ExtResource("1_ionc4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 410, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 810, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="World"]
 visible = false

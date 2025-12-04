@@ -3,38 +3,40 @@
 [ext_resource type="Script" uid="uid://b4tq2uo5vxxgk" path="res://systems/planet_generator/scripts/planet.gd" id="1_5hgi1"]
 [ext_resource type="Resource" uid="uid://nf84gu5m3oti" path="res://systems/planet_generator/PlanetData.tres" id="2_b02po"]
 [ext_resource type="Script" uid="uid://d0kf88byirko5" path="res://systems/planet_generator/scripts/planet_mesh_face.gd" id="2_n8883"]
-[ext_resource type="Material" uid="uid://ceunpra6p1ow3" path="res://systems/planet_generator/materials/Planet.tres" id="3_opnpt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b02po"]
+cull_mode = 2
 
 [node name="Planet" type="Node3D"]
 script = ExtResource("1_5hgi1")
 planeta_data = ExtResource("2_b02po")
 
 [node name="Up" type="MeshInstance3D" parent="."]
-material_override = ExtResource("3_opnpt")
+material_override = SubResource("StandardMaterial3D_b02po")
 script = ExtResource("2_n8883")
 normal = Vector3(0, 1, 0)
 
 [node name="Down" type="MeshInstance3D" parent="."]
-material_override = ExtResource("3_opnpt")
+material_override = SubResource("StandardMaterial3D_b02po")
 script = ExtResource("2_n8883")
 normal = Vector3(0, -1, 0)
 
 [node name="Left" type="MeshInstance3D" parent="."]
-material_override = ExtResource("3_opnpt")
+material_override = SubResource("StandardMaterial3D_b02po")
 script = ExtResource("2_n8883")
 normal = Vector3(-1, 0, 0)
 
 [node name="Right" type="MeshInstance3D" parent="."]
-material_override = ExtResource("3_opnpt")
+material_override = SubResource("StandardMaterial3D_b02po")
 script = ExtResource("2_n8883")
 normal = Vector3(1, 0, 0)
 
 [node name="Front" type="MeshInstance3D" parent="."]
-material_override = ExtResource("3_opnpt")
+material_override = SubResource("StandardMaterial3D_b02po")
 script = ExtResource("2_n8883")
 normal = Vector3(0, 0, 1)
 
 [node name="Back" type="MeshInstance3D" parent="."]
-material_override = ExtResource("3_opnpt")
+material_override = SubResource("StandardMaterial3D_b02po")
 script = ExtResource("2_n8883")
 normal = Vector3(0, 0, -1)

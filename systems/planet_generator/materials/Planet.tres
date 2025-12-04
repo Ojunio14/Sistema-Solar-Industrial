@@ -6,8 +6,8 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_dp3p7")
-shader_parameter/sea_level = 1400.0
-shader_parameter/beach_size = 10.0
+shader_parameter/sea_level = 50.0
+shader_parameter/beach_size = 2.0
 shader_parameter/snow_height = 80.0
 shader_parameter/uv_scale = 0.05
 shader_parameter/color_water = Color(0, 0.2, 0.8, 1)
