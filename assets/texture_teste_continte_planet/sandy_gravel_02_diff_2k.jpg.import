@@ -2,20 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://co28ncxoi14nv"
-path="res://.godot/imported/teste_conti_1.png-83e316ed21180a53a509fab1d4e56db7.ctex"
+uid="uid://ctase2q5u6yky"
+path.s3tc="res://.godot/imported/sandy_gravel_02_diff_2k.jpg-58c450098a69a8192e67a64d732f9016.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://assets/texture_teste_continte_planet/teste_conti_1.png"
-dest_files=["res://.godot/imported/teste_conti_1.png-83e316ed21180a53a509fab1d4e56db7.ctex"]
+source_file="res://assets/texture_teste_continte_planet/sandy_gravel_02_diff_2k.jpg"
+dest_files=["res://.godot/imported/sandy_gravel_02_diff_2k.jpg-58c450098a69a8192e67a64d732f9016.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -23,7 +24,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -37,4 +38,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

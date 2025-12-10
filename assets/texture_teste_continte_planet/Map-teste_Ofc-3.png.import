@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfmq61ckd6f3d"
-path="res://.godot/imported/Map-teste_Ofc-2.png-a9b149a5e844f2b34c4ec6f13e226232.ctex"
+uid="uid://c5ulcrylv103c"
+path="res://.godot/imported/Map-teste_Ofc-3.png-4b0b1767e5663dee4422d8fe20e4a0ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/texture_teste_continte_planet/Map-teste_Ofc-2.png"
-dest_files=["res://.godot/imported/Map-teste_Ofc-2.png-a9b149a5e844f2b34c4ec6f13e226232.ctex"]
+source_file="res://assets/texture_teste_continte_planet/Map-teste_Ofc-3.png"
+dest_files=["res://.godot/imported/Map-teste_Ofc-3.png-4b0b1767e5663dee4422d8fe20e4a0ab.ctex"]
 
 [params]
 

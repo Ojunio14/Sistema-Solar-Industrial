@@ -38,6 +38,10 @@ shadow_enabled = true
 
 [node name="Group_Camera" type="Node3D" parent="World"]
 
+[node name="Camera_Livre" parent="World/Group_Camera" instance=ExtResource("1_ionc4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55000, 0, 0)
+far = 50000.0
+
 [node name="Gimbal_Orbital" parent="World/Group_Camera" node_paths=PackedStringArray("target") instance=ExtResource("2_ihqgu")]
 target = NodePath("../../MeshInstance3D")
 sensitivity = 0.5
@@ -45,9 +49,6 @@ orbit_radius = 800.0
 minimum_orbit_distance = 800.0
 maximum_orbit_distance = 1400.0
 my_id = "Orbital"
-
-[node name="Camera_Livre" parent="World/Group_Camera" instance=ExtResource("1_ionc4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 810, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="World"]
 visible = false
@@ -60,4 +61,5 @@ shape = SubResource("ConcavePolygonShape3D_ionc4")
 
 [node name="P" type="Node3D" parent="World"]
 
-[node name="Planet" parent="World/P" instance=ExtResource("3_ihqgu")]
+[node name="Planet" parent="World/P" node_paths=PackedStringArray("viewer") instance=ExtResource("3_ihqgu")]
+viewer = NodePath("../../Group_Camera/Camera_Livre")

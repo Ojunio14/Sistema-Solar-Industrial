@@ -1,22 +1,9 @@
-[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://ceunpra6p1ow3"]
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://ceunpra6p1ow3"]
 
 [ext_resource type="Shader" uid="uid://ywxu3n7vtlqs" path="res://systems/planet_generator/shaders/debug.gdshader" id="1_dp3p7"]
-[ext_resource type="Texture2D" uid="uid://cjufsns66ygh7" path="res://assets/texture_teste_continte_planet/Poliigon_GrassPatchyGround_4585_BaseColor.jpg" id="2_ken8s"]
 
 [resource]
 render_priority = 0
 shader = ExtResource("1_dp3p7")
-shader_parameter/sea_level = 50.0
-shader_parameter/beach_size = 2.0
-shader_parameter/snow_height = 80.0
-shader_parameter/uv_scale = 0.05
-shader_parameter/color_water = Color(0, 0.2, 0.8, 1)
-shader_parameter/color_beach = Color(0.76, 0.7, 0.5, 1)
-shader_parameter/color_desert = Color(0.85, 0.75, 0.5, 1)
-shader_parameter/color_savanna = Color(0.6, 0.65, 0.2, 1)
-shader_parameter/color_forest = Color(0.15, 0.5, 0.15, 1)
-shader_parameter/tex_forest = ExtResource("2_ken8s")
-shader_parameter/color_taiga = Color(0.1, 0.3, 0.2, 1)
-shader_parameter/color_tundra = Color(0.4, 0.45, 0.35, 1)
-shader_parameter/color_alpine = Color(0.4, 0.4, 0.4, 1)
-shader_parameter/color_snow = Color(1, 1, 1, 1)
+shader_parameter/radius = 800.0
+shader_parameter/min_height = 0.0

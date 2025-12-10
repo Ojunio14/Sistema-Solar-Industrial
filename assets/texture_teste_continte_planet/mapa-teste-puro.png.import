@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy0bea4lyu06n"
-path="res://.godot/imported/Gemini_Generated_Image_u962oou962oou962.png-ddb0e7308b261c099aff92ec2e5475a4.ctex"
+uid="uid://o31w5k5xcftk"
+path="res://.godot/imported/mapa-teste-puro.png-ca5f298e85f5e58f6bbcba1e687c2bd6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/texture_teste_continte_planet/Gemini_Generated_Image_u962oou962oou962.png"
-dest_files=["res://.godot/imported/Gemini_Generated_Image_u962oou962oou962.png-ddb0e7308b261c099aff92ec2e5475a4.ctex"]
+source_file="res://assets/texture_teste_continte_planet/mapa-teste-puro.png"
+dest_files=["res://.godot/imported/mapa-teste-puro.png-ca5f298e85f5e58f6bbcba1e687c2bd6.ctex"]
 
 [params]
 
