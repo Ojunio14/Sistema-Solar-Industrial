@@ -1,4 +1,4 @@
-@tool
+#@tool
 extends Node3D
 
 # Arraste o Resource PlanetData aqui

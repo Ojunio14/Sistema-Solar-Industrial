@@ -13,7 +13,7 @@ metadata/_custom_type_script = "uid://coijm4hcy56ui"
 [sub_resource type="Resource" id="Resource_b047j"]
 script = ExtResource("4_eiaex")
 radius = 50000.0
-resolution = 100
+resolution = 20
 height_map = SubResource("Resource_e76lq")
 metadata/_custom_type_script = "uid://dcyw4k80j2tmk"
 

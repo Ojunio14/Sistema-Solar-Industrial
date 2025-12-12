@@ -10,19 +10,15 @@ extends Camera3D
 @export var boost_multiplier : float = 5.0  # Multiplicador ao segurar Shift
 @export var max_speed_scale : float = 100.0 # Para viajar rápido pelo planeta
 
-#@export var my_id : String = "FreeFly"
-
 @export var my_id : CameraManager.Cam_Id
 
-#@export var cursor_visual : Node3D 
+
+
 # Variáveis internas
 var current_speed_scale : float = 1.0
 
 func _ready():
-	#CameraManager.current_camera_id = my_id
 	CameraManager.register_camera(my_id, self)
-	#CameraManager.switch_camera(my_id)
-	#CameraManager.current_camera = self
 	# Captura o mouse para ele não sair da tela
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -89,35 +85,6 @@ func _process(delta):
 	# Chamamos a função que recalcula a rotação para alinhar com o planeta
 	align_horizon_to_planet()
 
-
-# Arraste um MeshInstance (uma esfera pequena vermelha) para cá no inspector
-# para servir de "cursor 3D"
-
-#
-#func _physics_process(delta):
-	## 1. Pega a posição do mouse na tela
-	#var mouse_pos = get_viewport().get_mouse_position()
-	#
-	## 2. Cria um Raio (Raycast) da câmera até o mundo
-	#var from = project_ray_origin(mouse_pos)
-	#var to = from + project_ray_normal(mouse_pos) * 10000.0 # Raio de 10km
-	#
-	## 3. Pergunta para a Física: "No que eu bati?"
-	#var space_state = get_world_3d().direct_space_state
-	#var query = PhysicsRayQueryParameters3D.create(from, to)
-	#var result = space_state.intersect_ray(query)
-	#
-	#if result:
-		## SE ENTRAR AQUI, A COLISÃO DO QUADTREE ESTÁ FUNCIONANDO!
-		#var ponto_impacto = result.position
-		#print("Chão detectado em: ", ponto_impacto)
-		#
-		## Move a bolinha vermelha para o ponto
-		#if cursor_visual:
-			#cursor_visual.global_position = ponto_impacto
-	#else:
-		#pass
-		#print("Mouse no vazio...")
 func align_horizon_to_planet():
 	# 1. Descobrir onde é "Cima" no planeta (Vetor da gravidade invertido)
 	var planet_up = (global_position - planet_center).normalized()

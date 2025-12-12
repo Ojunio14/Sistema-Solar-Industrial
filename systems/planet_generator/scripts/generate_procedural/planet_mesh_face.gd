@@ -14,7 +14,7 @@ const CURRENT_MODE : ViewMode = ViewMode.HYBRID
 var normal : Vector3
 var chunk_origin : Vector2
 var chunk_size : float
-var resolution : int = 32 # Resolução de cada pedaço
+var resolution : int = 20 # Resolução de cada pedaço
 
 func regenerate_mesh(planet_data : PlanetData):
 	var arrays := []
@@ -162,4 +162,19 @@ func _update_mesh(arrays : Array):
 			solid_mat.next_pass = wire_mat
 			self.material_override = solid_mat
 	# Colisão (Opcional - Ative só quando o jogador for andar)
-	# create_trimesh_collision()
+	# --- LÓGICA DE COLISÃO ---
+	# Só gera colisão se o pedaço for pequeno (chunk_size < 0.1 ou algo assim)
+	# ou se o depth (profundidade) for alta.
+	
+	# DICA PARA SEU TESTE:
+	# Como você quer testar andar, ative a colisão sempre por enquanto, 
+	# mas saiba que vai pesar no FPS.
+	
+	if get_parent().depth > 4: # Exemplo: Só gera física nos níveis detalhados
+		create_trimesh_collision()
+	
+	# Limpeza de colisão antiga
+	else:
+		for child in get_children():
+			if child is StaticBody3D:
+				child.queue_free()

@@ -18,8 +18,8 @@ var pitch: float
 
 # Variável para armazenar o movimento do mouse entre as funções
 var _mouse_motion: Vector2 = Vector2.ZERO
-@export var my_id : String = "Gimbal_Orbital"
-
+#@export var my_id : String = "Gimbal_Orbital"
+@export var my_id : CameraManager.Cam_Id
 # Unity: void Start()
 func _ready() -> void:
 	

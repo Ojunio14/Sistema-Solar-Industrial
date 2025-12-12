@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://q7m1rw31ux4l"]
+
+[ext_resource type="Script" uid="uid://5d2rs5vw3eq7" path="res://scenes/player/scripts/camera_wire_frame.gd" id="1_gka2k"]
+
+[node name="CameraWireFrame" type="Camera3D"]
+script = ExtResource("1_gka2k")
+
+[node name="CameraWireFrame" type="Node3D" parent="."]

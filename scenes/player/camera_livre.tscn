@@ -3,4 +3,5 @@
 [ext_resource type="Script" uid="uid://qw8thnl8mqr4" path="res://scenes/player/scripts/camera_livre.gd" id="1_x2vk8"]
 
 [node name="Camera_Livre" type="Camera3D"]
+far = 300000.0
 script = ExtResource("1_x2vk8")
